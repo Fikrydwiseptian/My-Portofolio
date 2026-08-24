@@ -45,6 +45,16 @@ import logoSucofindo from "../assets/images/Sucofindo_Putih.png";
 import logoIdsurvey from "../assets/images/logo_IDSURVEY.png";
 import logoDanantara from "../assets/images/Logo_Danantara.png";
 
+// Import Logo Perusahaan Client
+import logoPln from "../assets/Logo Perusahaan/Logo PT.PLN.png";
+import logoPge from "../assets/Logo Perusahaan/Logo PT. Pertamina Geothermal Energy.png";
+import logoPertamina from "../assets/Logo Perusahaan/Logo PT.Pertamina.png";
+import logoBukitAsam from "../assets/Logo Perusahaan/Logo PT.Bukit Asam.png";
+import logoCargill from "../assets/Logo Perusahaan/Logo PT.Cargill.jpg";
+import logoNestle from "../assets/Logo Perusahaan/Logo PT. Nestle.png";
+import logoKai from "../assets/Logo Perusahaan/Logo PT. KAI.png";
+import logoSpm from "../assets/Logo Perusahaan/Logo PT. SPM.png";
+
 // Import Foto Bersama Client
 import clientPhoto1 from "../assets/Foto Bersama Klient/WhatsApp Image 2026-08-24 at 10.08.43.jpeg";
 import clientPhoto2 from "../assets/Foto Bersama Klient/WhatsApp Image 2026-08-24 at 10.08.45.jpeg";
@@ -93,9 +103,14 @@ const PERSONAL_INFO = {
 
 // ─── DAFTAR CLIENT & MITRA STRATEGIS ───
 const CLIENTS_LIST = [
-  { name: "PT. PLN (Persero)", type: "Kelistrikan & Pembangkit", badge: "PLN" },
-  { name: "PT. Pertamina Geothermal Energy", type: "Energi Panas Bumi & EBTKE", badge: "PGE" },
-  { name: "PT. Cargill Indonesia", type: "Manufaktur & Industri Agro", badge: "Cargill" },
+  { name: "PT. PLN (Persero)", type: "Kelistrikan & Pembangkit", logo: logoPln },
+  { name: "PT. Pertamina Geothermal Energy", type: "Energi Panas Bumi & EBTKE", logo: logoPge },
+  { name: "PT. Pertamina (Persero)", type: "Minyak, Gas & Energi", logo: logoPertamina },
+  { name: "PT. Bukit Asam Tbk", type: "Pertambangan & Energi", logo: logoBukitAsam },
+  { name: "PT. Cargill Indonesia", type: "Manufaktur & Industri Agro", logo: logoCargill },
+  { name: "PT. Nestle Indonesia", type: "Industri Makanan & Manufaktur", logo: logoNestle },
+  { name: "PT. KAI (Persero)", type: "Transportasi & Logistik", logo: logoKai },
+  { name: "PT. SPM", type: "Industri & Manufaktur", logo: logoSpm },
   { name: "PT. SUCOFINDO (Persero)", type: "Testing, Inspection & Certification", logo: logoSucofindo },
   { name: "IDSurvey", type: "Survey & Inspection Holding", logo: logoIdsurvey },
   { name: "Danantara Indonesia", type: "Investasi & Infrastruktur", logo: logoDanantara },
@@ -771,25 +786,21 @@ export default function Portfolio() {
           </p>
           <h2 className="text-lg sm:text-2xl font-bold text-white mb-8">Client & Pengalaman Mitra</h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 items-center justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 sm:gap-4 items-center justify-center">
             {CLIENTS_LIST.map((client, cIdx) => (
               <div
                 key={cIdx}
-                className="flex flex-col items-center justify-center p-4 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-teal-500/40 hover:bg-slate-800/80 transition-all shadow-sm group h-24"
+                className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-teal-500/50 hover:bg-slate-800/90 transition-all shadow-md group h-28 sm:h-32"
               >
-                {client.logo ? (
+                <div className="w-full h-12 sm:h-14 flex items-center justify-center mb-2 px-2.5 py-1.5 bg-white/90 rounded-lg shadow-inner group-hover:bg-white transition-colors">
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="h-8 sm:h-10 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all mb-1"
+                    className="max-h-8 sm:max-h-10 w-auto object-contain transition-transform group-hover:scale-105"
                   />
-                ) : (
-                  <div className="w-10 h-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center font-bold text-teal-400 text-xs mb-1">
-                    {client.badge}
-                  </div>
-                )}
-                <span className="text-[10px] font-bold text-slate-300 text-center line-clamp-1">{client.name}</span>
-                <span className="text-[8px] text-slate-500 text-center line-clamp-1">{client.type}</span>
+                </div>
+                <span className="text-[10px] sm:text-xs font-bold text-slate-200 text-center line-clamp-1">{client.name}</span>
+                <span className="text-[8px] sm:text-[9px] text-teal-400 text-center line-clamp-1 font-medium mt-0.5">{client.type}</span>
               </div>
             ))}
           </div>
