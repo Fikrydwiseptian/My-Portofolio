@@ -74,7 +74,7 @@ const PERSONAL_INFO = {
   tagline:
     "Profesional Inspeksi Teknik dan Keselamatan Kerja (K3) dengan lisensi sertifikasi resmi. Berpengalaman dalam pengujian peralatan industri, Sertifikat Laik Operasi (SLO), dan manajemen risiko K3.",
   status: "Available for Technical Inspection & Consulting",
-  email: "fikry.septian@gmail.com",
+  email: "fikri.septian47@gmail.com",
   phone: "+62 895-6097-51903 / +62 811-159-915",
   location: "Bandar Lampung, Indonesia",
   github: "https://github.com/fikriseptian47",
