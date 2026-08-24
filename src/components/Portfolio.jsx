@@ -38,6 +38,8 @@ import {
   Image as ImageIcon,
   ZoomIn,
   Users,
+  Download,
+  FileText,
 } from "lucide-react";
 
 import fotoFikry from "../assets/tim/fikry.jpeg";
@@ -592,7 +594,17 @@ export default function Portfolio() {
               </button>
             </nav>
 
-            <div className="hidden md:block">
+            <div className="hidden md:flex items-center gap-2.5">
+              <a
+                href="./assets/Fikry Dwi Septian - Resume.pdf"
+                download="Fikry Dwi Septian - Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="text-xs sm:text-sm font-bold hover:opacity-90 transition-all cursor-pointer border border-emerald-500/40 rounded-lg px-3.5 py-1.5 bg-emerald-500/10 text-emerald-400 flex items-center gap-1.5"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Unduh CV</span>
+              </a>
               <button
                 onClick={() => scrollTo("contact")}
                 className="text-xs sm:text-sm font-bold hover:opacity-80 transition-opacity cursor-pointer border border-teal-500/30 rounded-lg px-3.5 py-1.5 bg-teal-500/10 text-teal-400"
@@ -701,6 +713,16 @@ export default function Portfolio() {
                 <FolderKanban className="w-4 h-4" />
                 <span>Pengalaman Proyek</span>
               </button>
+              <a
+                href="./assets/Fikry Dwi Septian - Resume.pdf"
+                download="Fikry Dwi Septian - Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="px-6 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/40 hover:bg-emerald-500/20 text-emerald-300 font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2"
+              >
+                <Download className="w-4 h-4 text-emerald-400" />
+                <span>Unduh CV (PDF)</span>
+              </a>
               <button
                 onClick={() => scrollTo("gallery")}
                 className="px-6 py-3 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-slate-600 hover:bg-slate-800 text-slate-200 font-semibold text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2"
@@ -1001,6 +1023,29 @@ export default function Portfolio() {
                   <p className="text-xs sm:text-sm text-emerald-400 font-medium">{PERSONAL_INFO.status}</p>
                 </div>
               </div>
+            </div>
+
+            {/* Download CV CTA Box */}
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-between p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-slate-800 gap-4">
+              <div className="flex items-center gap-3.5">
+                <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0">
+                  <FileText className="w-5 h-5" />
+                </div>
+                <div className="text-left">
+                  <h4 className="text-xs sm:text-sm font-bold text-white">Curriculum Vitae & Rekam Jejak Inspeksi</h4>
+                  <p className="text-[10px] sm:text-xs text-slate-400">Unduh dokumen resmi Resume Fikry Dwi Septian, S.T. (Format PDF)</p>
+                </div>
+              </div>
+              <a
+                href="./assets/Fikry Dwi Septian - Resume.pdf"
+                download="Fikry Dwi Septian - Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md shrink-0 cursor-pointer"
+              >
+                <Download className="w-4 h-4" />
+                <span>Unduh CV Resmi (PDF)</span>
+              </a>
             </div>
           </div>
         </div>

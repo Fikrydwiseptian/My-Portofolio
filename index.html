@@ -103,11 +103,11 @@
       { name: "PT. PLN (Persero)", type: "Kelistrikan & Pembangkit", image: "./assets/Logo Perusahaan/Logo PT.PLN.png" },
       { name: "PT. Pertamina Geothermal Energy", type: "Energi Panas Bumi & EBTKE", image: "./assets/Logo Perusahaan/Logo PT. Pertamina Geothermal Energy.png" },
       { name: "PT. Pertamina (Persero)", type: "Minyak, Gas & Energi", image: "./assets/Logo Perusahaan/Logo PT.Pertamina.png" },
-      { name: "PT. Bukit Asam Tbk", type: "Pertambangan & Energi", image: "./assets/Logo Perusahaan/Logo PT.Bukit Asam.png" },
+      { name: "PT. Bukit Asam (Persero) Tbk", type: "Pertambangan & Energi", image: "./assets/Logo Perusahaan/Logo PT.Bukit Asam.png" },
       { name: "PT. Cargill Indonesia", type: "Manufaktur & Industri Agro", image: "./assets/Logo Perusahaan/Logo PT.Cargill.jpg" },
       { name: "PT. Nestle Indonesia", type: "Industri Makanan & Manufaktur", image: "./assets/Logo Perusahaan/Logo PT. Nestle.png" },
       { name: "PT. KAI (Persero)", type: "Transportasi & Logistik", image: "./assets/Logo Perusahaan/Logo PT. KAI.png" },
-      { name: "PT. SPM", type: "Industri & Manufaktur", image: "./assets/Logo Perusahaan/Logo PT. SPM.png" },
+      { name: "PT. Sinar Pematang Mulia", type: "Industri & Manufaktur", image: "./assets/Logo Perusahaan/Logo PT. SPM.png" },
       { name: "PT. SUCOFINDO (Persero)", type: "Testing & Inspection", image: "./assets/images/Sucofindo_Putih.png" },
       { name: "IDSurvey", type: "Survey Holding", image: "./assets/images/logo_IDSURVEY.png" },
       { name: "Danantara Indonesia", type: "Infrastruktur", image: "./assets/images/Logo_Danantara.png" }
@@ -362,7 +362,11 @@
                   <button onClick={() => scrollTo("contact")} className="text-sm text-slate-400 hover:text-white transition-colors font-medium cursor-pointer">Kontak</button>
                 </nav>
 
-                <div className="hidden md:block">
+                <div className="hidden md:flex items-center gap-2.5">
+                  <a href="./assets/Fikry Dwi Septian - Resume.pdf" download="Fikry Dwi Septian - Resume.pdf" target="_blank" rel="noreferrer" className="text-xs sm:text-sm font-bold hover:opacity-90 transition-all cursor-pointer border border-emerald-500/40 rounded-lg px-3.5 py-1.5 bg-emerald-500/10 text-emerald-400 flex items-center gap-1.5">
+                    <i data-lucide="download" className="w-3.5 h-3.5"></i>
+                    <span>Unduh CV</span>
+                  </a>
                   <button onClick={() => scrollTo("contact")} className="text-xs sm:text-sm font-bold hover:opacity-80 transition-opacity cursor-pointer border border-teal-500/30 rounded-lg px-3.5 py-1.5 bg-teal-500/10 text-teal-400">
                     Hubungi Inspector
                   </button>
@@ -382,6 +386,7 @@
                 <button onClick={() => scrollTo("gallery")} className="block w-full text-left py-2 text-sm text-slate-300 hover:text-white">Dokumentasi Lapangan</button>
                 <button onClick={() => scrollTo("projects")} className="block w-full text-left py-2 text-sm text-slate-300 hover:text-white">Pengalaman Proyek</button>
                 <button onClick={() => scrollTo("contact")} className="block w-full text-left py-2 text-sm text-slate-300 hover:text-white">Kontak</button>
+                <a href="./assets/Fikry Dwi Septian - Resume.pdf" download="Fikry Dwi Septian - Resume.pdf" target="_blank" rel="noreferrer" className="block w-full text-left py-2 text-sm font-bold text-emerald-400 hover:text-emerald-300">Unduh CV (PDF)</a>
               </div>
             )}
           </header>
@@ -418,6 +423,10 @@
                     <i data-lucide="folder-kanban" className="w-4 h-4"></i>
                     <span>Pengalaman Proyek</span>
                   </button>
+                  <a href="./assets/Fikry Dwi Septian - Resume.pdf" download="Fikry Dwi Septian - Resume.pdf" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/40 hover:bg-emerald-500/20 text-emerald-300 font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2">
+                    <i data-lucide="download" className="w-4 h-4 text-emerald-400"></i>
+                    <span>Unduh CV (PDF)</span>
+                  </a>
                   <button onClick={() => scrollTo("gallery")} className="px-6 py-3 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-slate-600 text-slate-200 font-semibold text-xs sm:text-sm transition-all cursor-pointer flex items-center gap-2">
                     <i data-lucide="camera" className="w-4 h-4 text-teal-400"></i>
                     <span>Galeri Dokumen</span>
@@ -662,6 +671,29 @@
                       <p className="text-xs sm:text-sm text-emerald-400 font-medium">{PERSONAL_INFO.status}</p>
                     </div>
                   </div>
+                </div>
+
+                {/* Download CV CTA Box */}
+                <div className="mt-6 flex flex-col sm:flex-row items-center justify-between p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-slate-800 gap-4">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0">
+                      <i data-lucide="file-text" className="w-5 h-5"></i>
+                    </div>
+                    <div className="text-left">
+                      <h4 className="text-xs sm:text-sm font-bold text-white">Curriculum Vitae & Rekam Jejak Inspeksi</h4>
+                      <p className="text-[10px] sm:text-xs text-slate-400">Unduh dokumen resmi Resume Fikry Dwi Septian, S.T. (Format PDF)</p>
+                    </div>
+                  </div>
+                  <a
+                    href="./assets/Fikry Dwi Septian - Resume.pdf"
+                    download="Fikry Dwi Septian - Resume.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md shrink-0 cursor-pointer"
+                  >
+                    <i data-lucide="download" className="w-4 h-4"></i>
+                    <span>Unduh CV Resmi (PDF)</span>
+                  </a>
                 </div>
               </div>
             </div>
